@@ -19,6 +19,7 @@ $("#product-" + id).text(data)
     });
 
     $.get("/products/" + id + "/inventory", function(data) {
+      byebug
       if data == "true"
       $("#product-" + id).text("Available")
       else
