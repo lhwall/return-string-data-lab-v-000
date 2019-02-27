@@ -18,13 +18,13 @@ $(function () {
 $("#product-" + id).text(data)
     });
 
-    // $.get("/products/" + id + "/inventory", function(data) {
-    //   if data == "true"
-    //   $("#product-" + id).text("Available")
-    //   else
-    //   $("#product-" + id).text("Sold Out")
+    $.get("/products/" + id + "/inventory", function(data) {
+      if data == "true"
+      $("#product-" + id).text("Available")
+      else
+      $("#product-" + id).text("Sold Out")
 
-    // });
+    });
 
   });
 });
