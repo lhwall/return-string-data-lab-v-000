@@ -14,7 +14,7 @@ $(function () {
   $(".js-more").on('click', function() {
 
     let id = $(this).data("id");
-    $.get("/products/" + id + "/description", et("/products/" + id + "/inventory", function(data) {
+    $.get("/products/" + id + "/description", "/products/" + id + "/inventory", function(data) {
 $("#product-" + id).text(data)
     });
 
