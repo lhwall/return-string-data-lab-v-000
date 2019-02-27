@@ -15,12 +15,16 @@ $(function () {
 
     var id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
-      $.get("/products/" + id + "/inventory", function(data) {
+      $.get("/products/" + id + "/inventory", function(data1) {
         console.log(data)
-        if (data == "true"){
-        $("#product-" + id).text("Available")}
-        else {
-        $("#product-" + id).text("Sold Out")}
+        if (data1 == "true"){
+          var isDataTrue = "Available"}
+          else {
+            var isDataTrue = "Sold Out"
+          }
+        // $("#product-" + id).text("Available")}
+        // else {
+        // $("#product-" + id).text("Sold Out")}
 
       });
 $("#product-" + id).text(data)
