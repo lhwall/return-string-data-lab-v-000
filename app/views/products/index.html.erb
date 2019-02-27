@@ -12,13 +12,7 @@
 <script type="text/javascript" charset="utf-8">
 $(function () {
   $(".js-more").on('click', function() {
-
-    let id = $(this).data("id");
-    $.get("/products/" + id + "/description", function(data) {
-      $("#product-" + id).text(data)
-
-    // get the id from the data attribute
-    let id = $(this).data("id");
+  let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
 $("#product-" + id).text(data)
     });
