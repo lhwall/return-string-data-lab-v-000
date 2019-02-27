@@ -20,10 +20,10 @@ $("#product-" + id).text(data)
 
     $.get("/products/" + id + "/inventory", function(data) {
       console.log(data)
-      if data == "true"
-      $("#product-" + id).text("Available")
-      else
-      $("#product-" + id).text("Sold Out")
+      if (data == "true"){
+      $("#product-" + id).text("Available")}
+      else {
+      $("#product-" + id).text("Sold Out")}
 
     });
 
