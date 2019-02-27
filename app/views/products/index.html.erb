@@ -19,7 +19,7 @@ $(function () {
 
     // get the id from the data attribute
     let id = $(this).data("id");
-    $.get("/posts/" + id + "/description", function(data) {
+    $.get("/products/" + id + "/description", function(data) {
 $("#description-" + id).text(data)
     });
   });
