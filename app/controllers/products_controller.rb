@@ -9,9 +9,6 @@ def new
 end
 
 def description
-end
-
-def body
   product = Product.find(params[:id])
   render plain: product.description
 end
