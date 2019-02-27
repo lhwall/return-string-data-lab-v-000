@@ -12,14 +12,11 @@
 <script type="text/javascript" charset="utf-8">
 $(function () {
   $(".js-more").on('click', function() {
-  let id = $(this).data("id");
-    $.get("/products/" + id + "/description", function(data) {
-$("#product-" + id).text(data)}
 
-$.get("/products/" + id + "/inventory", function(data) {
+    let id = $(this).data("id");
+    $.get("/products/" + id + "/description", function(data) {
 $("#product-" + id).text(data)
     });
   });
-
 });
 </script>
